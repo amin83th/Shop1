@@ -1,0 +1,39 @@
+.all{
+    background: #ff9eb070;
+    width: 60%;
+    position: absolute;
+    top: 420px;
+    left: 370px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #f1597570;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first img{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+}
+.secend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secend img{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+}
+.therd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.therd img{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+}

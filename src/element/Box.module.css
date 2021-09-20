@@ -1,0 +1,28 @@
+.div{
+    position: absolute;
+    top: 1100px;
+    right: 100px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    box-shadow: #000 1px 1px 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.div div[a]{
+    width: 200px;
+    height: 100px;
+}
+.div a{
+    background: rgb(83, 200, 255);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+.div a:hover{
+    box-shadow: blue 1px 1px 20px ;
+}
