@@ -4,7 +4,7 @@ function Gallery() {
   return (
     <div>
         <CategoryStyle />
-      <All />
+        <All />
     </div>
   );
 }

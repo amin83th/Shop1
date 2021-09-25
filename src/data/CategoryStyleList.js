@@ -1,9 +1,10 @@
 import classes from "./CategoryStyleList.module.css";
 import CategoryStyleRender from "./CategoryStyleRender";
 function CategoryStyleList(props) {
+
   return (
     <div className={classes.div}>
-      <form>
+      <form onChange={props.onChange}>
         {props.meetups.map((meetup) => (
           <CategoryStyleRender
             key={meetup.Id}

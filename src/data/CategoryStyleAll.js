@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react';
 import CategoryStyleList from './CategoryStyleList';
-function CategoryStyleAll(){
+function CategoryStyleAll(props){
     const [isLoading,setIsLoading]=useState(true);
   const [loadedMeetups,setLoadedMeetups]=useState([]);
     useEffect(()=>{
@@ -36,7 +36,7 @@ function CategoryStyleAll(){
       }
     return(
         <div>
-            <CategoryStyleList meetups={loadedMeetups} />
+            <CategoryStyleList meetups={loadedMeetups} onChange={props.onChange}/>
         </div>
     );
 }
