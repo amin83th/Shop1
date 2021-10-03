@@ -1,22 +1,27 @@
 import classes from "./CategoryStyleList.module.css";
-import CategoryStyleRender from "./CategoryStyleRender";
+// import { useRef } from "react";
+import {useState} from "react";
 function CategoryStyleList(props) {
+  // const one = useRef();
 
+  const [before,setBefore] = useState("");
+  function box(event){
+    event.preventDefault();
+    // const enteredOne = one.current.value;
+    const meetupData = {
+      salam:before,
+    };
+    // props.onAddMeetup(meetupData);
+    console.log(meetupData);
+  }
   return (
     <div className={classes.div}>
-      <form onChange={props.onChange}>
-        {props.meetups.map((meetup) => (
-          <CategoryStyleRender
-            key={meetup.Id}
-            Id={meetup.Id}
-            Title={meetup.Title}
-            ImgUrl={meetup.ImgUrl}
-            Description={meetup.Description}
-          />
+      <form onSubmit={box}>
+  ‍‍‍     {props.meetups.map(meetup => (
+          <div key={meetup.Id}>
+            <button value={meetup.Title}>{meetup.Title}</button>
+          </div>
         ))}
-        <div>
-          <button>Filter</button>
-        </div>
       </form>
     </div>
   );

@@ -3,7 +3,8 @@ import Render from "./Render";
 function List(props) {
   return (
     <ul className={classes.ul}>
-      {props.meetups.map((meetup) => (
+      {props.meetups.filter((meetup) => meetup.CategoriesId === 1)
+      .map((meetup) => (
         <Render
           key={meetup.Id}
           Id={meetup.Id}
