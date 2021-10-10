@@ -1,25 +1,17 @@
 import classes from "./CategoryStyleList.module.css";
-// import { useRef } from "react";
-import {useState} from "react";
-function CategoryStyleList(props) {
-  // const one = useRef();
 
-  const [before,setBefore] = useState("");
-  function box(event){
-    event.preventDefault();
-    // const enteredOne = one.current.value;
-    const meetupData = {
-      salam:before,
-    };
-    // props.onAddMeetup(meetupData);
-    console.log(meetupData);
+// import {useState} from "react";
+function CategoryStyleList(props) {
+  function filter(event){
+    console.log(event.target.checked , event.target.value)
   }
   return (
     <div className={classes.div}>
-      <form onSubmit={box}>
+      <form >
   ‍‍‍     {props.meetups.map(meetup => (
-          <div key={meetup.Id}>
-            <button value={meetup.Title}>{meetup.Title}</button>
+          <div>
+            <label>{meetup.Title}</label>
+             <input type="checkbox" value={meetup.CategoriesId} onChange = {(e)=>{filter(e,meetup.categoryId)}}/>
           </div>
         ))}
       </form>
